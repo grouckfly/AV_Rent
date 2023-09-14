@@ -1,0 +1,146 @@
+*{
+    margin: 0%;
+    padding: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(155, 155, 155, 0.75),rgba(49, 49, 49, 0.75));
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 200px;
+}
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+.navbar ul li::after{
+  content: '';
+  height: 3px;
+  width: 0;
+  background: cyan;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+}
+.navbar ul li:hover::after{
+  width: 100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+.content h1{
+    font-size: 50px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+.menu-content {
+    display: grid;
+    grid-gap: 10px;
+    grid-area: auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 0fr));
+    justify-content: center;
+}
+.sub-menu {
+    background: #fff;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    width: 270px;
+    height: 325px;
+    padding: 1rem;
+    text-align: absolute;
+  }
+  
+  .sub-menu:hover {
+    box-shadow: 0 1px 20px rgba(104, 104, 104, 0.8);
+  }
+  a#btn_scroll:before {
+     animation: move-down 2s infinite;
+  }
+  @keyframes move-down {
+    80% {
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateY(5.3em);
+        opacity: 0;
+    }
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  .card-img-top {
+    max-height: 200px;
+    max-width: 270px;
+    min-height: 150px;
+    min-width: 150px;
+    z-index: 0;
+    position: relative;
+  }
+  @media (max-width: 756px) {
+    .sub-menu {
+      width: 100%;
+      height: 100%;
+    }
+    .box {
+      width: 100%;
+    }
+  }
+.button{
+    width: 200px;
+    padding: 15px 0; 
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid cyan;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: cyan;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
